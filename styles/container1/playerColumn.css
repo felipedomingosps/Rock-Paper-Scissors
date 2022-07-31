@@ -15,3 +15,9 @@
 .playerColumn__pointsBox {
     border: 0.1rem solid black;
 }
+
+.playerBox__hand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

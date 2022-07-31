@@ -6,4 +6,5 @@
 
 .choice__img {
     width: 25%;
+    transform: scaleX(-1);
 }

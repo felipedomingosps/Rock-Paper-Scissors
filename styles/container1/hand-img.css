@@ -1,3 +1,7 @@
 .hand__img {
     width: 50%;
 }
+
+.hand__img--player {
+    transform: scaleX(-1);
+}

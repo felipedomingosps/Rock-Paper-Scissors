@@ -6,10 +6,12 @@
     border: 0.1rem solid black;
     gap: 0.3rem;
     padding: 1rem;
+    text-align: center;
 }
 
 .playerColumn__playerBox {
     border: 0.1rem solid black;
+    padding: 1rem;
 }
 
 .playerColumn__pointsBox {

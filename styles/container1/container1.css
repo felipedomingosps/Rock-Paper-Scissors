@@ -1,0 +1,9 @@
+/* Container1 */ 
+
+.container1 {
+    border: 0.1rem solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 10%;
+    gap: 0.5rem;
+}

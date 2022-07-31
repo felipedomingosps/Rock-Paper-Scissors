@@ -1,0 +1,9 @@
+.container2__choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice__img {
+    width: 25%;
+}

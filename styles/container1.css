@@ -1,0 +1,71 @@
+.container1 {
+    border: 0.1rem solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 10%;
+    gap: 0.5rem;
+}
+
+/* Container1's children*/
+
+.container1__roundCounter {
+    border: 0.1rem solid black;
+    text-align: center;
+}
+
+.container1__display {
+    border: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    gap: 0.3rem;
+    align-items: stretch;
+}
+
+/* playerColumn */
+
+.display__playerColumn {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid black;
+    gap: 0.3rem;
+    padding: 1rem;
+}
+
+.playerColumn__playerBox {
+    border: 0.1rem solid black;
+}
+
+.playerColumn__pointsBox {
+    border: 0.1rem solid black;
+}
+
+/* versus */
+
+.display__versus {
+    border: 0.1rem solid black;
+    display: flex;
+    align-items: center;
+}
+
+.versus__content {
+    font-size: 5rem;
+}
+
+/* pcColumn */
+
+.display__pcColumn {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid black;
+    gap: 0.3rem;
+    padding: 1rem;
+}
+
+.pcColumn__pcBox {
+    border: 0.1rem solid black;
+}
+
+.pcColumn__pointsBox {
+    border: 0.1rem solid black;
+}

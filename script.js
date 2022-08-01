@@ -70,8 +70,8 @@ function game() {
 
 // -------------DOM manipulation
 
-
 //Event that listen to the choice clicked by the player
-window.addEventListener('click', function(e){
-    return e.target.id;
-});
+const choices = Array.from(document.getElementsByClassName('choice__img'));
+choices.forEach(item => item.addEventListener('click', function(e) {
+    return e.target.id
+}))

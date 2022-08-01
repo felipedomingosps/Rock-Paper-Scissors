@@ -67,3 +67,11 @@ function game() {
         alert(`GAME OVER! \n \n You: ${playerScore} \n PC: ${computerScore} \n You lost!`)
     }
 }
+
+// -------------DOM manipulation
+
+
+//Event that listen to the choice clicked by the player
+window.addEventListener('click', function(e){
+    return e.target.id;
+});

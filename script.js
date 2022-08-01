@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Animates the display after a round is finished
-function roundAnimation(winner, player, pc) {
+function playRoundAnimation(winner, player, pc) {
     //...
 }
 

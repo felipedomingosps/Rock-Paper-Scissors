@@ -32,7 +32,8 @@ function playRound(playerSelection, computerSelection) {
 
 // Animates the display after a round is finished
 function playRoundAnimation(winner, player, pc) {
-    //...
+    //1) Animate both hands shaking;
+    
 }
 
 // See who won the entire game

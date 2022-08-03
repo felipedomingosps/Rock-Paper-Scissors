@@ -6,3 +6,17 @@
     transform: scaleX(-1);
 }
 
+.roundPlay {
+  animation-name: shake;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+    0%   {transform: rotate(0deg);}
+    25%  {transform: rotate(-90deg);}
+    100%  {transform: rotate(0deg)}
+    75%  {transform: rotate(-90deg);}
+    100% {transform: rotate(0deg);}
+}

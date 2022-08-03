@@ -10,7 +10,7 @@
 /* Animations */
 
 .roundPlay {
-  animation-name: shake, showHand;
+  animation-name: shake;
   animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-iteration-count: 3;
@@ -26,4 +26,9 @@
     25%  {transform: rotate(-60deg)}
     50%  {transform: rotate(-90deg)}
     100%  {transform: rotate(0deg)}
+}
+
+@keyframes showHand {
+    0%   {transform: rotate(-90deg);}
+    100%  {transform: rotate(-90deg)}
 }

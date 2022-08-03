@@ -1,13 +1,19 @@
 //Add class by ID
 function addClass(className, id) {
-    let element = document.getElementById(`${id}`)
-    element.classList.add(`${className}`)
+    let element = document.getElementById(`${id}`);
+    element.classList.add(`${className}`);
 }
 
 //Remove class by ID
 function removeClass(className, id) {
-    let element = document.getElementById(`${id}`)
+    let element = document.getElementById(`${id}`);
     element.classList.remove(`${className}`)
+}
+
+//Change IMG
+function changeImg(elementId, imgName) {
+    let element = document.getElementById(`${elementId}`);
+    element.setAttribute("src", `./images/${imgName}.png`);
 }
 
 //Returns a random valor of the array [rock, paper, scissors]

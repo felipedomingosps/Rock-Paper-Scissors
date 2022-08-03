@@ -6,17 +6,24 @@
     transform: scaleX(-1);
 }
 
+
+/* Animations */
+
 .roundPlay {
-  animation-name: shake;
-  animation-duration: 0.7s;
+  animation-name: shake, showHand;
+  animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-iteration-count: 3;
 }
 
+.handPlayed {
+    animation-name: showHand;
+  animation-duration: 5s;
+}
+
 @keyframes shake {
     0%   {transform: rotate(0deg);}
-    25%  {transform: rotate(-90deg);}
+    25%  {transform: rotate(-60deg)}
+    50%  {transform: rotate(-90deg)}
     100%  {transform: rotate(0deg)}
-    75%  {transform: rotate(-90deg);}
-    100% {transform: rotate(0deg);}
 }

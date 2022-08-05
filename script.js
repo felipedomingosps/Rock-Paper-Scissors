@@ -1,3 +1,8 @@
+//Stop the code execution
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 //Add class by ID
 function addClass(className, id) {
     let element = document.getElementById(`${id}`);
@@ -49,9 +54,36 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Animates the display after a round is finished
-function playRoundAnimation(winner, player, pc) {
-    //1) Animate both hands shaking;ç
-    
+function RoundAnimation(winner, playerHand, pcHand) {    
+    async function execution() {
+        addClass('roundPlay','hand-img-pc');
+        addClass('roundPlay','hand-img-player');
+        setTimeout (() => {
+        removeClass('roundPlay','hand-img-pc');
+        removeClass('roundPlay','hand-img-player');
+        }, "3000")
+
+        await sleep(2500)
+
+        changeImg('hand-img-player', playerHand)
+        changeImg('hand-img-pc', pcHand)
+
+        await sleep(500)
+
+        addClass('handPlayed','hand-img-pc');
+        addClass('handPlayed','hand-img-player');
+        setTimeout (() => {
+        removeClass('handPlayed','hand-img-pc');
+        removeClass('handPlayed','hand-img-player');
+        }, "3000")
+
+        await sleep(3000)
+
+        changeImg('hand-img-player', 'rock')
+        changeImg('hand-img-pc', 'rock')
+    }
+
+    execution()
 }
 
 // See who won the entire game
@@ -67,4 +99,3 @@ function game() {
     }))
     //...
 }
-

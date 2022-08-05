@@ -56,31 +56,53 @@ function playRound(playerSelection, computerSelection) {
 // Animates the display after a round is finished
 function RoundAnimation(winner, playerHand, pcHand) {    
     async function execution() {
+
+        //Shake hands
         addClass('roundPlay','hand-img-pc');
         addClass('roundPlay','hand-img-player');
-        setTimeout (() => {
-        removeClass('roundPlay','hand-img-pc');
-        removeClass('roundPlay','hand-img-player');
-        }, "3000")
-
         await sleep(2500)
 
+        //Remove Class - Shake Hands
+        removeClass('roundPlay','hand-img-pc');
+        removeClass('roundPlay','hand-img-player');
+
+        //Show Hands
+        addClass('scaleDown','hand-img-pc');
+        addClass('scaleDown','hand-img-player');
+        await sleep(100)
         changeImg('hand-img-player', playerHand)
         changeImg('hand-img-pc', pcHand)
-
+        await sleep(800)
+        removeClass('scaleDown','hand-img-pc');
+        removeClass('scaleDown','hand-img-player');
         await sleep(500)
 
+        //Play Hand
         addClass('handPlayed','hand-img-pc');
         addClass('handPlayed','hand-img-player');
-        setTimeout (() => {
-        removeClass('handPlayed','hand-img-pc');
-        removeClass('handPlayed','hand-img-player');
-        }, "3000")
+        /* Add container animation here */
+        await sleep(2900)        
 
+        //Raise Hand
+        addClass('handRaise','hand-img-pc');
+        addClass('handRaise','hand-img-player');
         await sleep(3000)
 
+        removeClass('handRaise','hand-img-pc');
+        removeClass('handRaise','hand-img-player');
+
+        removeClass('handPlayed','hand-img-pc');
+        removeClass('handPlayed','hand-img-player'); 
+
+        addClass('scaleDown','hand-img-pc');
+        addClass('scaleDown','hand-img-player');
         changeImg('hand-img-player', 'rock')
         changeImg('hand-img-pc', 'rock')
+        
+        await sleep(1000)
+
+        removeClass('scaleDown','hand-img-pc');
+        removeClass('scaleDown','hand-img-player');
     }
 
     execution()

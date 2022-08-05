@@ -18,8 +18,19 @@
 
 .handPlayed {
     animation-name: showHand;
-  animation-duration: 5s;
+    animation-duration: 3s;
 }
+
+.handRaise {
+    animation-name: raiseHand;
+    animation-duration: 3s;
+}
+
+.scaleDown {
+    animation-name: scaleDown;
+    animation-duration: 1s;
+}
+
 
 @keyframes shake {
     0%   {transform: rotate(0deg);}
@@ -29,6 +40,18 @@
 }
 
 @keyframes showHand {
-    0%   {transform: rotate(-90deg);}
+    0%  {transform: rotate(0deg);}
+    25%  {transform: rotate(-90deg) }
     100%  {transform: rotate(-90deg)}
+}
+
+@keyframes raiseHand {
+    from {transform: rotate(-90deg);}
+    to {transform: rotate(0deg);} 
+}
+
+@keyframes scaleDown {
+    0%  {}
+    50%  {transform: scale(0.9);}
+    100%  {transform: scale(1);}
 }

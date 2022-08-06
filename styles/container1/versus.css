@@ -1,7 +1,6 @@
 /* versus */
 
 .display__versus {
-    border: 0.1rem solid black;
     display: flex;
     align-items: center;
 }

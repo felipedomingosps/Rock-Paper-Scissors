@@ -3,7 +3,6 @@
 .display__pcColumn {
     display: flex;
     flex-direction: column;
-    border: 0.1rem solid black;
     gap: 0.3rem;
     padding: 1rem;
     text-align: center;

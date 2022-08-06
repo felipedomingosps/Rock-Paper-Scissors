@@ -1,12 +1,10 @@
 /* Container1's children*/
 
 .container1__roundCounter {
-    border: 0.1rem solid black;
     text-align: center;
 }
 
 .container1__display {
-    border: 0.1rem solid black;
     display: flex;
     justify-content: center;
     padding: 2rem;

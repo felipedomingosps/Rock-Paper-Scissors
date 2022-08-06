@@ -11,10 +11,13 @@
 .playerColumn__playerBox {
     border: 0.1rem solid black;
     padding: 1rem;
+    border-radius: 25px;
 }
 
 .playerColumn__pointsBox {
     border: 0.1rem solid black;
+    border-radius: 60px;
+    padding: 0.5rem;
 }
 
 .playerBox__hand {

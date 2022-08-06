@@ -1,7 +1,6 @@
 /* Container2 */ 
 
 .container2 {
-    border: 0.1rem solid black;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,7 +1,7 @@
 :root {
-    --yellow: #FFCB4C;
-    --gray-blue: #2F4858;
     --green: #008A7D;
+    --gray-blue: #2F4858;
+    --yellow: #FFCB4C;
 }
 
 html {
@@ -16,6 +16,6 @@ html {
 
 body {
     flex-grow: 1;
-    background: linear-gradient(var(--green), var(--gray-blue)) no-repeat;
+    background: #2F4858;
 
 }

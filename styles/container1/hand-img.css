@@ -10,42 +10,49 @@
 /* Animations */
 
 .roundPlay {
-  animation-name: shake;
-  animation-duration: 0.8s;
+  animation-name: roundPlay;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: 3;
 }
 
 .handPlayed {
-    animation-name: showHand;
+    animation-name: handPlayed;
     animation-duration: 3s;
+    animation-timing-function: ease-out;
 }
 
 .handRaise {
-    animation-name: raiseHand;
-    animation-duration: 3s;
+    animation-name: handRaise;
+    animation-duration: 1s;
 }
 
 .scaleDown {
     animation-name: scaleDown;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
+}
+
+.scaleUp {
+    animation-name: scaleUp;
+    animation-duration: 0.5s;
 }
 
 
-@keyframes shake {
+
+@keyframes roundPlay {
     0%   {transform: rotate(0deg);}
     25%  {transform: rotate(-60deg)}
     50%  {transform: rotate(-90deg)}
     100%  {transform: rotate(0deg)}
 }
 
-@keyframes showHand {
+@keyframes handPlayed {
     0%  {transform: rotate(0deg);}
     25%  {transform: rotate(-90deg) }
     100%  {transform: rotate(-90deg)}
 }
 
-@keyframes raiseHand {
+@keyframes handRaise {
     from {transform: rotate(-90deg);}
     to {transform: rotate(0deg);} 
 }
@@ -53,5 +60,11 @@
 @keyframes scaleDown {
     0%  {}
     50%  {transform: scale(0.9);}
+    100%  {transform: scale(1);}
+}
+
+@keyframes scaleUp {
+    0%  {}
+    50%  {transform: scale(1.1);}
     100%  {transform: scale(1);}
 }

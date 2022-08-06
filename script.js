@@ -60,22 +60,21 @@ function RoundAnimation(winner, playerHand, pcHand) {
         //Shake hands
         addClass('roundPlay','hand-img-pc');
         addClass('roundPlay','hand-img-player');
-        await sleep(2500)
+        await sleep(1450)
 
         //Remove Class - Shake Hands
         removeClass('roundPlay','hand-img-pc');
         removeClass('roundPlay','hand-img-player');
 
         //Show Hands
-        addClass('scaleDown','hand-img-pc');
-        addClass('scaleDown','hand-img-player');
+        addClass('scaleUp','hand-img-pc');
+        addClass('scaleUp','hand-img-player');
         await sleep(100)
         changeImg('hand-img-player', playerHand)
         changeImg('hand-img-pc', pcHand)
-        await sleep(800)
-        removeClass('scaleDown','hand-img-pc');
-        removeClass('scaleDown','hand-img-player');
         await sleep(500)
+        removeClass('scaleUp','hand-img-pc');
+        removeClass('scaleUp','hand-img-player');
 
         //Play Hand
         addClass('handPlayed','hand-img-pc');
@@ -86,7 +85,7 @@ function RoundAnimation(winner, playerHand, pcHand) {
         //Raise Hand
         addClass('handRaise','hand-img-pc');
         addClass('handRaise','hand-img-player');
-        await sleep(3000)
+        await sleep(800)
 
         removeClass('handRaise','hand-img-pc');
         removeClass('handRaise','hand-img-player');

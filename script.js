@@ -1,3 +1,14 @@
+//Return the id of the clicked choice
+function returnIdFromClick() {
+    let choice = '';
+    const choices = Array.from(document.getElementsByClassName('choice__img'));
+    choices.forEach(item => item.addEventListener('click', function(e) {
+        return playRound(e.target.id, getComputerChoice());
+    }))
+    
+}
+returnIdFromClick()
+
 //Stop the code execution
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -54,7 +65,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // Animates the display after a round is finished
-function RoundAnimation(winner, playerHand, pcHand) {    
+function roundAnimation(winner, playerHand, pcHand) {    
     async function execution() {
         //Shake hands
         addClass('roundPlay','hand-img-pc');
@@ -142,11 +153,3 @@ async function getWinner(playerPoints,pcPoints) {
     }
 }
 
-function game() {
-    //Return the id of the clicked choice
-    const choices = Array.from(document.getElementsByClassName('choice__img'));
-    choices.forEach(item => item.addEventListener('click', function(e) {
-        return e.target.id
-    }))
-    //...
-}

@@ -56,7 +56,6 @@ function playRound(playerSelection, computerSelection) {
 // Animates the display after a round is finished
 function RoundAnimation(winner, playerHand, pcHand) {    
     async function execution() {
-
         //Shake hands
         addClass('roundPlay','hand-img-pc');
         addClass('roundPlay','hand-img-player');
@@ -108,8 +107,39 @@ function RoundAnimation(winner, playerHand, pcHand) {
 }
 
 // See who won the entire game
-function getWinner(player,pc) {
-    //...
+async function getWinner(playerPoints,pcPoints) {
+    if (playerPoints > pcPoints) {
+        let text = document.getElementById('round-text');
+        text.innerHTML = 'Player Wins!'
+
+        // > Add container animation later      
+
+        addClass('scaleUp','hand-img-pc');
+        addClass('scaleUp','hand-img-player');
+        await sleep(100)
+        changeImg('hand-img-player', 'smile')
+        changeImg('hand-img-pc', 'sad')
+        await sleep(500)
+        removeClass('scaleUp','hand-img-pc');
+        removeClass('scaleUp','hand-img-player');
+    } else {
+        let text = document.getElementById('round-text');
+        text.innerHTML = 'PC Wins!'
+        
+        //Add Later: container animation
+
+        addClass('scaleUp','hand-img-pc');
+        addClass('scaleUp','hand-img-player');
+        await sleep(100)
+        changeImg('hand-img-pc', 'smile')
+        changeImg('hand-img-player', 'sad')
+        await sleep(500)
+        removeClass('scaleUp','hand-img-pc');
+        removeClass('scaleUp','hand-img-player');
+
+        //Add Later: Await
+        //Add Later: END of the game
+    }
 }
 
 function game() {

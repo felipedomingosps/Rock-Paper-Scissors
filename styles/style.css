@@ -1,4 +1,21 @@
+:root {
+    --yellow: #FFCB4C;
+    --gray-blue: #2F4858;
+    --green: #008A7D;
+}
+
+html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 * {
     box-sizing: border-box;
 }
 
+body {
+    flex-grow: 1;
+    background: linear-gradient(var(--green), var(--gray-blue)) no-repeat;
+
+}

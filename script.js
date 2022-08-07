@@ -14,6 +14,10 @@ function startGame() {
     }))
 }
 
+//Start Game !!!
+
+startGame();
+
 //Stop the code execution
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

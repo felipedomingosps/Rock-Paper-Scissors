@@ -1,3 +1,9 @@
+//Universal Variables
+
+let playerTotalPoints = 0;
+let pcTotalPoints = 0;
+let round = 1;
+
 //Return the id of the clicked choice
 function returnIdFromClick() {
     let choice = '';

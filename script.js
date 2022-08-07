@@ -4,7 +4,7 @@ let playerTotalPoints = 0;
 let pcTotalPoints = 0;
 let round = 1;
 
-//Return the id of the clicked choice
+//This starts the game with a Event Listener
 function startGame() {
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
@@ -15,7 +15,6 @@ function startGame() {
 }
 
 //Start Game !!!
-
 startGame();
 
 //Stop the code execution
@@ -51,17 +50,20 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     // Establish the game rules
     let selection = {'rock':'scissors', 'scissors':'paper', 'paper':'rock'};
+    let winner = '';
 
     // Define who won the round
     let winnerSelection;
     if (selection[playerSelection] === computerSelection) {
         winnerSelection = playerSelection;
+        winner = 'player';
     } else {
         winnerSelection = computerSelection;
+        winner = 'computer'
     };
 
     // Call round animation function
-    roundAnimation(winnerSelection, playerSelection, computerSelection);
+    roundAnimation(winner, playerSelection, computerSelection);
 
     // Increment round
 

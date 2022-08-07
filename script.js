@@ -5,7 +5,7 @@ let pcTotalPoints = 0;
 let round = 1;
 
 //Return the id of the clicked choice
-function returnIdFromClick() {
+function startGame() {
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
         if (round <= 5) {
@@ -13,7 +13,6 @@ function returnIdFromClick() {
         };
     }))
 }
-returnIdFromClick()
 
 //Stop the code execution
 function sleep(ms) {

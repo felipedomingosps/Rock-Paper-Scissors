@@ -6,12 +6,12 @@ let round = 1;
 
 //Return the id of the clicked choice
 function returnIdFromClick() {
-    let choice = '';
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
-        return playRound(e.target.id, getComputerChoice());
+        if (round <= 5) {
+            return playRound(e.target.id, getComputerChoice());
+        };
     }))
-    
 }
 returnIdFromClick()
 
@@ -59,6 +59,10 @@ function playRound(playerSelection, computerSelection) {
 
     // Call round animation function
     roundAnimation(winnerSelection, playerSelection, computerSelection);
+
+    // Increment round
+
+    round += 1;
 
     // Return the message
     if (playerSelection === computerSelection) {

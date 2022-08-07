@@ -69,14 +69,13 @@ function playRound(playerSelection, computerSelection) {
 
     // Return the message
     if (playerSelection === computerSelection) {
-        return 'tie';
+        return null;
     } else if (winnerSelection === playerSelection) {
-        return `win`;
+        return playerTotalPoints += 1;;
     } else if (winnerSelection === computerSelection){
-        return `lose`; 
+        return pcTotalPoints += 1; 
     };
 }
-
 // Animates the display after a round is finished
 function roundAnimation(winner, playerHand, pcHand) {    
     async function execution() {

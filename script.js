@@ -50,16 +50,19 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     // Establish the game rules
     let selection = {'rock':'scissors', 'scissors':'paper', 'paper':'rock'};
-    let winner = '';
+    let winner;
 
     // Define who won the round
     let winnerSelection;
-    if (selection[playerSelection] === computerSelection) {
+    
+    if (playerSelection === computerSelection) {
+        winner = 'tie';
+    } else if (selection[playerSelection] === computerSelection) {
         winnerSelection = playerSelection;
         winner = 'player';
     } else {
         winnerSelection = computerSelection;
-        winner = 'computer'
+        winner = 'computer';
     };
 
     // Call round animation function
@@ -104,8 +107,7 @@ function roundAnimation(winner, playerHand, pcHand) {
         addClass('handPlayed','hand-img-pc');
         addClass('handPlayed','hand-img-player');
         /* Add container animation here */
-        await sleep(2900)        
-
+        
         //Raise Hand
         addClass('handRaise','hand-img-pc');
         addClass('handRaise','hand-img-player');

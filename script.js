@@ -1,21 +1,29 @@
 //Universal Variables
 
-let playerTotalPoints = 0;
-let pcTotalPoints = 0;
-let round = 1;
+var playerTotalPoints = 0;
+var pcTotalPoints = 0;
+var round = 1;
 
 //This starts the game with a Event Listener
 function startGame() {
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
         if (round <= 5) {
-            return playRound(e.target.id, getComputerChoice());
+            playRound(e.target.id, getComputerChoice());
         };
+               
     }))
 }
 
 //Start Game !!!
 startGame();
+
+//Display Round Count
+
+function displayRoundCount() {
+    const currentRound = document.getElementById('round-text-span');
+    currentRound.innerHTML = round;
+}
 
 //Stop the code execution
 function sleep(ms) {
@@ -73,12 +81,14 @@ function playRound(playerSelection, computerSelection) {
 
     // Return the message
     if (playerSelection === computerSelection) {
-        return null;
+        null;
     } else if (winnerSelection === playerSelection) {
-        return playerTotalPoints += 1;;
+        playerTotalPoints += 1;;
     } else if (winnerSelection === computerSelection){
-        return pcTotalPoints += 1; 
+        pcTotalPoints += 1; 
     };
+
+    
 }
 // Animates the display after a round is finished
 function roundAnimation(winner, playerHand, pcHand) {    
@@ -129,6 +139,15 @@ function roundAnimation(winner, playerHand, pcHand) {
 
         removeClass('scaleDown','hand-img-pc');
         removeClass('scaleDown','hand-img-player');
+
+        //Change Round Count
+        if (round <= 5) {
+            displayRoundCount() 
+            addClass('blink', 'round-text')
+            await sleep(1000)
+            removeClass('blink', 'round-text')
+
+        }        
     }
 
     execution()

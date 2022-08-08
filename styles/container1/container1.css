@@ -20,7 +20,7 @@
 
 .blink {
     animation-name: blink;
-    animation-duration: 1s;
+    animation-duration: .5s;
 }
 
 @keyframes blink {

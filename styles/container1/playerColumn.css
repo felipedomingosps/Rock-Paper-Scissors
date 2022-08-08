@@ -9,15 +9,25 @@
 }
 
 .playerColumn__playerBox {
-    border: 0.1rem solid black;
     padding: 1rem;
     border-radius: 25px;
+    background-color: var(--dark-blue);
+}
+
+.playerBox__name {
+    color: var(--yellow);
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 .playerColumn__pointsBox {
-    border: 0.1rem solid black;
     border-radius: 60px;
     padding: 0.5rem;
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .playerBox__hand {
@@ -25,3 +35,4 @@
     align-items: center;
     justify-content: center;
 }
+

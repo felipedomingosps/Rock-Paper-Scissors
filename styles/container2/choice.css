@@ -3,7 +3,13 @@
     align-items: center;
     justify-content: space-around;
     max-width: 20%;
+    border-radius: 50%;
+    transition: 700ms;
+    cursor: pointer;
+}
 
+.container2__choice:hover {
+    transform: scale(1.1);
 }
 
 .choice__img {

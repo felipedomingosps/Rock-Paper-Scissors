@@ -6,3 +6,12 @@
     padding: 2rem;
     border-radius: 60px;
 }
+
+.title {
+    color: var(--yellow);
+    font-weight: 700;
+    letter-spacing: .15em;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.4em;
+}

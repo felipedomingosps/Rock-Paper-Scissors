@@ -98,115 +98,112 @@ function playRound(playerSelection, computerSelection) {
     
 }
 // Animates the display after a round is finished
-function roundAnimation(winner, playerHand, pcHand) {    
-    async function execution() {
-        //Shake hands
-        addClass('roundPlay','hand-img-pc');
-        addClass('roundPlay','hand-img-player');
-        await sleep(1450)
+async function roundAnimation(winner, playerHand, pcHand) {    
+//Shake hands
+addClass('roundPlay','hand-img-pc');
+addClass('roundPlay','hand-img-player');
+await sleep(1450)
 
-        //Remove Class - Shake Hands
-        removeClass('roundPlay','hand-img-pc');
-        removeClass('roundPlay','hand-img-player');
+//Remove Class - Shake Hands
+removeClass('roundPlay','hand-img-pc');
+removeClass('roundPlay','hand-img-player');
 
-        //Show Hands
-        addClass('scaleUp','hand-img-pc');
-        addClass('scaleUp','hand-img-player');
-        await sleep(100)
-        changeImg('hand-img-player', playerHand)
-        changeImg('hand-img-pc', pcHand)
-        await sleep(500)
-        removeClass('scaleUp','hand-img-pc');
-        removeClass('scaleUp','hand-img-player');
+//Show Hands
+addClass('scaleUp','hand-img-pc');
+addClass('scaleUp','hand-img-player');
+await sleep(100)
+changeImg('hand-img-player', playerHand)
+changeImg('hand-img-pc', pcHand)
+await sleep(500)
+removeClass('scaleUp','hand-img-pc');
+removeClass('scaleUp','hand-img-player');
 
-        //Play Hand
-        addClass('handPlayed','hand-img-pc');
-        addClass('handPlayed','hand-img-player');
-        await sleep(400)
+//Play Hand
+addClass('handPlayed','hand-img-pc');
+addClass('handPlayed','hand-img-player');
+await sleep(400)
 
-        if (winner === 'player') {
-            incrementPoints('pointsBox-point-player');
-            addClass('blink', 'player-points');
-            await sleep(1000);
-            removeClass('blink', 'player-points');
-        } else if (winner === 'pc') {
-            incrementPoints('pointsBox-point-pc');
-            addClass('blink', 'pc-points');
-            await sleep(1000);
-            removeClass('blink', 'pc-points');
-        } else {
-            await sleep(1000)
-        }
+if (winner === 'player') {
+    incrementPoints('pointsBox-point-player');
+    addClass('blink', 'player-points');
+    await sleep(1000);
+    removeClass('blink', 'player-points');
+} else if (winner === 'pc') {
+    incrementPoints('pointsBox-point-pc');
+    addClass('blink', 'pc-points');
+    await sleep(1000);
+    removeClass('blink', 'pc-points');
+    } else {
+        await sleep(1000)
+    }
             
-        await sleep(1500)        
+    await sleep(1500)        
 
-        //Raise Hand
-        addClass('handRaise','hand-img-pc');
-        addClass('handRaise','hand-img-player');
-        await sleep(800)
+    //Raise Hand
+    addClass('handRaise','hand-img-pc');
+    addClass('handRaise','hand-img-player');
+    await sleep(800)
 
-        removeClass('handRaise','hand-img-pc');
-        removeClass('handRaise','hand-img-player');
+    removeClass('handRaise','hand-img-pc');
+    removeClass('handRaise','hand-img-player');
 
-        removeClass('handPlayed','hand-img-pc');
-        removeClass('handPlayed','hand-img-player'); 
+    removeClass('handPlayed','hand-img-pc');
+    removeClass('handPlayed','hand-img-player'); 
 
-        addClass('scaleDown','hand-img-pc');
-        addClass('scaleDown','hand-img-player');
-        changeImg('hand-img-player', 'rock')
-        changeImg('hand-img-pc', 'rock')
-        await sleep(1000)          
+    addClass('scaleDown','hand-img-pc');
+    addClass('scaleDown','hand-img-player');
+    changeImg('hand-img-player', 'rock')
+    changeImg('hand-img-pc', 'rock')
+    await sleep(1000)          
 
-        removeClass('scaleDown','hand-img-pc');
-        removeClass('scaleDown','hand-img-player');
+    removeClass('scaleDown','hand-img-pc');
+    removeClass('scaleDown','hand-img-player');
 
-        //Change Round Count
+    //Change Round Count
 
-        if (round <= 5) {
-            displayRoundCount() 
-            addClass('blink', 'round-text')
-            await sleep(1000)
-            removeClass('blink', 'round-text')
+    if (round <= 5) {
+        displayRoundCount() 
+        addClass('blink', 'round-text')
+        await sleep(1000)
+        removeClass('blink', 'round-text')
 
-        }
     }
 
-    execution()
 }
 
 // See who won the entire game
 async function getWinner(playerPoints,pcPoints) {
-    if (playerPoints > pcPoints) {
-        let text = document.getElementById('round-text');
-        text.innerHTML = 'Player Wins!'
+if (playerPoints > pcPoints) {
+    let text = document.getElementById('round-text');
+    text.innerHTML = 'Player Wins!'
 
-        // > Add container animation later      
+    // > Add container animation later      
 
-        addClass('scaleUp','hand-img-pc');
-        addClass('scaleUp','hand-img-player');
-        await sleep(100)
-        changeImg('hand-img-player', 'smile')
-        changeImg('hand-img-pc', 'sad')
-        await sleep(500)
-        removeClass('scaleUp','hand-img-pc');
-        removeClass('scaleUp','hand-img-player');
-    } else {
-        let text = document.getElementById('round-text');
-        text.innerHTML = 'PC Wins!'
-        
-        //Add Later: container animation
+    addClass('scaleUp','hand-img-pc');
+    addClass('scaleUp','hand-img-player');
+    await sleep(100)
+    changeImg('hand-img-player', 'smile')
+    changeImg('hand-img-pc', 'sad')
+    await sleep(500)
+    removeClass('scaleUp','hand-img-pc');
+    removeClass('scaleUp','hand-img-player');
+} else {
+    let text = document.getElementById('round-text');
+    text.innerHTML = 'PC Wins!'
+    
+    //Add Later: container animation
 
-        addClass('scaleUp','hand-img-pc');
-        addClass('scaleUp','hand-img-player');
-        await sleep(100)
-        changeImg('hand-img-pc', 'smile')
-        changeImg('hand-img-player', 'sad')
-        await sleep(500)
-        removeClass('scaleUp','hand-img-pc');
-        removeClass('scaleUp','hand-img-player');
+    addClass('scaleUp','hand-img-pc');
+    addClass('scaleUp','hand-img-player');
+    await sleep(100)
+    changeImg('hand-img-pc', 'smile')
+    changeImg('hand-img-player', 'sad')
+    await sleep(500)
+    removeClass('scaleUp','hand-img-pc');
+    removeClass('scaleUp','hand-img-player');
 
-        //Add Later: Await
-        //Add Later: END of the game
-    }
+    //Add Later: Await
+    //Add Later: END of the game
+}
 }
 

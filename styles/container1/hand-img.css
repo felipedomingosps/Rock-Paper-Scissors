@@ -37,6 +37,9 @@
     animation-duration: 0.5s;
 }
 
+.pointerEventsNone {
+    pointer-events: none;
+}
 
 
 @keyframes roundPlay {

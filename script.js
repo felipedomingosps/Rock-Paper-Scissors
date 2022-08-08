@@ -98,7 +98,12 @@ function playRound(playerSelection, computerSelection) {
     
 }
 // Animates the display after a round is finished
-async function roundAnimation(winner, playerHand, pcHand) {    
+async function roundAnimation(winner, playerHand, pcHand) {
+
+for (let item of ['rock', 'paper', 'scissors']) {
+    addClass('pointerEventsNone', `${item}-container`)
+}
+
 //Shake hands
 addClass('roundPlay','hand-img-pc');
 addClass('roundPlay','hand-img-player');
@@ -169,6 +174,9 @@ if (winner === 'player') {
 
     }
 
+    for (let item of ['rock', 'paper', 'scissors']) {
+        removeClass('pointerEventsNone', `${item}-container`)
+    }
 }
 
 // See who won the entire game

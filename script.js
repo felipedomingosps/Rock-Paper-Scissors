@@ -9,9 +9,8 @@ function startGame() {
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
         if (round <= 5) {
-            playRound(e.target.id, getComputerChoice());
-        };
-               
+            playRound(e.target.id, getComputerChoice());  
+        };               
     }))
 }
 
@@ -23,6 +22,14 @@ startGame();
 function displayRoundCount() {
     const currentRound = document.getElementById('round-text-span');
     currentRound.innerHTML = round;
+}
+
+function incrementPoints(idName) {
+    let pointBox = document.getElementById(idName);
+    if (idName === 'pointsBox-point-player') {
+        pointBox.innerHTML = playerTotalPoints;
+    } else if (idName === 'pointsBox-point-pc')
+        pointBox.innerHTML = pcTotalPoints;    
 }
 
 //Stop the code execution
@@ -69,7 +76,7 @@ function playRound(playerSelection, computerSelection) {
         winner = 'player';
     } else {
         winnerSelection = computerSelection;
-        winner = 'computer';
+        winner = 'pc';
     };
 
     // Call round animation function
@@ -115,9 +122,23 @@ function roundAnimation(winner, playerHand, pcHand) {
         //Play Hand
         addClass('handPlayed','hand-img-pc');
         addClass('handPlayed','hand-img-player');
-        /* Add container animation here */
+        await sleep(400)
 
-        await sleep(2900)        
+        if (winner === 'player') {
+            incrementPoints('pointsBox-point-player');
+            addClass('blink', 'player-points');
+            await sleep(1000);
+            removeClass('blink', 'player-points');
+        } else if (winner === 'pc') {
+            incrementPoints('pointsBox-point-pc');
+            addClass('blink', 'pc-points');
+            await sleep(1000);
+            removeClass('blink', 'pc-points');
+        } else {
+            await sleep(1000)
+        }
+            
+        await sleep(1500)        
 
         //Raise Hand
         addClass('handRaise','hand-img-pc');
@@ -134,20 +155,20 @@ function roundAnimation(winner, playerHand, pcHand) {
         addClass('scaleDown','hand-img-player');
         changeImg('hand-img-player', 'rock')
         changeImg('hand-img-pc', 'rock')
-        
-        await sleep(1000)
+        await sleep(1000)          
 
         removeClass('scaleDown','hand-img-pc');
         removeClass('scaleDown','hand-img-player');
 
         //Change Round Count
+
         if (round <= 5) {
             displayRoundCount() 
             addClass('blink', 'round-text')
             await sleep(1000)
             removeClass('blink', 'round-text')
 
-        }        
+        }
     }
 
     execution()

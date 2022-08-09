@@ -64,14 +64,16 @@
             <div class="container2__choice container2__choice--scissors" id="scissors-container"><img class="choice__img choice__img--scissors" alt="Scissors" src="./images/scissors.png" id="scissors" /></div>
         </div>
         <div class="endGameContainer">
-            <p class="endGameContainer__title"><span class="endGameContainer__winner">???</span> Won!</p>
-            <div class="endGameContainer__emoji"></div>
+            <p class="endGameContainer__title"><span id="endGameContainer-winner">???</span> Won!</p>
+            <div class="endGameContainer__emoji">
+                <img class="endGameContainer__img" src="./images/smile.png" alt="emoji smiling">
+            </div>
             <div class="endGameContainer__score">
                 <div class="endGameContainer__player">
-                    <p class="endGameContainer__playerText">Player:<span class="endGameContainer__playerPoints">0</span></p>
+                    <p class="endGameContainer__text endGameContainer__playerText">Player:<span id="endGameContainer-playerPoints">0</span></p>
                 </div>
                 <div class="endGameContainer__pc">
-                    <p class="endGameContainer__pcText">PC:<span class="endGameContainer__pcPoints">0</span></p>
+                    <p class="endGameContainer__text endGameContainer__pcText">PC:<span id="endGameContainer-pcPoints">0</span></p>
                 </div>
             </div>
 

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./styles/endgamecontainer.css" />
 </head>
 <body>
-    <main class="main">
+    <main class="main" id="main">
         <h1 class="title">Rock, Paper, Scissors</h1>
         <div class="container1">
             <div class="container1__roundCounter">
@@ -63,7 +63,7 @@
             <div class="container2__choice container2__choice--paper" id="paper-container"><img class="choice__img choice__img--paper" alt="Paper" src="./images/paper.png" id="paper" /></div>
             <div class="container2__choice container2__choice--scissors" id="scissors-container"><img class="choice__img choice__img--scissors" alt="Scissors" src="./images/scissors.png" id="scissors" /></div>
         </div>
-        <div class="endGameContainer">
+        <div class="endGameContainer" id="endGame">
             <p class="endGameContainer__title"><span id="endGameContainer-winner">???</span> Won!</p>
             <div class="endGameContainer__emoji">
                 <img class="endGameContainer__img" src="./images/smile.png" alt="emoji smiling" id="endGameContainer-emoji">
@@ -77,7 +77,7 @@
                 </div>
             </div>
 
-            <div class="endGameContainer__playAgain">
+            <div class="endGameContainer__playAgain" >
                 <a href="/" class="playAgain__button">Play Again</a>
             </div>
         </div>

@@ -14,8 +14,9 @@
     flex-wrap: wrap;
 }
 
-.endGameContainer--Show {
+.endGameContainer--show {
     display: flex;
+    z-index: 100;
 }
 
 .endGameContainer__title {

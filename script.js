@@ -10,7 +10,9 @@ function startGame() {
     choices.forEach(item => item.addEventListener('click', function(e) {
         if (round <= 5) {
             playRound(e.target.id, getComputerChoice());  
-        };               
+        } else {
+            endGame()
+        }               
     }))
 }
 
@@ -180,3 +182,25 @@ if (winner === 'player') {
 }
 
 
+//Show the end game container
+
+function endGame() {
+    let winner = document.getElementById('endGameContainer-winner');
+    let endGamePcPoints = document.getElementById('endGameContainer-pcPoints');
+    let endGamePlayerPoints = document.getElementById('endGameContainer-playerPoints');
+
+    if (playerTotalPoints > pcTotalPoints) {
+        winner.innerHTML = "Player";
+        changeImg('endGameContainer-emoji', 'smile')
+    } else if (playerTotalPoints < pcTotalPoints) {
+        winner.innerHTML = "PC";
+        changeImg('endGameContainer-emoji', 'sad')
+    } else {
+        winner.innerHTML = "No one";
+        changeImg('endGameContainer-emoji', 'tie')
+    }
+
+    endGamePcPoints.innerHTML = pcTotalPoints;
+    endGamePlayerPoints.innerHTML = playerTotalPoints;
+    addClass('endGameContainer--show', 'endGame');
+}

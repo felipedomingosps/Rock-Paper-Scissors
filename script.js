@@ -184,7 +184,7 @@ if (winner === 'player') {
 //Show the end game container
 
 async function endGame() {
-    await sleep(10000)
+    await sleep(7000)
     if (round != 6) {
         return
     } 

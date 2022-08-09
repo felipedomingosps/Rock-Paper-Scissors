@@ -12,6 +12,7 @@
     display: none;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .endGameContainer--show {
@@ -87,8 +88,8 @@
     display: flex;
     margin-bottom: 2rem;
     justify-content: center;
-    align-items: flex-end;
-    flex-grow: 1;
+    /*align-items: flex-end;
+    flex-grow: 1;*/
 }
 .playAgain__button {
     display: block;

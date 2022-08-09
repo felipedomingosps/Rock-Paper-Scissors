@@ -205,5 +205,8 @@ async function endGame() {
 
     endGamePcPoints.innerHTML = pcTotalPoints;
     endGamePlayerPoints.innerHTML = playerTotalPoints;
+    addClass('hide', 'container1')
+    addClass('hide', 'container2')
+    addClass('hide', 'title')
     addClass('endGameContainer--show', 'endGame');
 }

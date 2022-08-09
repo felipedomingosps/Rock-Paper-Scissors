@@ -17,9 +17,17 @@
 
 .endGameContainer--show {
     display: flex;
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
     z-index: 100;
 }
 
+@keyframes show {
+    100% {opacity: 1;}
+}
 .endGameContainer__title {
     font-size: 3.5rem;
     color: var(--green);

@@ -9,10 +9,9 @@ function startGame() {
     const choices = Array.from(document.getElementsByClassName('choice__img'));
     choices.forEach(item => item.addEventListener('click', function(e) {
         if (round <= 5) {
-            playRound(e.target.id, getComputerChoice());  
-        } else {
-            endGame()
-        }               
+            playRound(e.target.id, getComputerChoice());
+            endGame()  
+        }        
     }))
 }
 
@@ -85,9 +84,9 @@ function playRound(playerSelection, computerSelection) {
     roundAnimation(winner, playerSelection, computerSelection);
 
     // Increment round
-
+    
     round += 1;
-
+    
     // Return the message
     if (playerSelection === computerSelection) {
         null;
@@ -184,7 +183,11 @@ if (winner === 'player') {
 
 //Show the end game container
 
-function endGame() {
+async function endGame() {
+    await sleep(10000)
+    if (round != 6) {
+        return
+    } 
     let winner = document.getElementById('endGameContainer-winner');
     let endGamePcPoints = document.getElementById('endGameContainer-pcPoints');
     let endGamePlayerPoints = document.getElementById('endGameContainer-playerPoints');

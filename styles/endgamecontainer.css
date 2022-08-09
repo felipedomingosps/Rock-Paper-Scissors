@@ -1,3 +1,5 @@
+/* PARENT */
+
 .endGameContainer {
     background-color: var(--dark-blue);
     width: 100%;
@@ -7,12 +9,17 @@
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 60px;
-    display: flex;
+    display: none;
     flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.endGameContainer--Show {
+    display: flex;
 }
 
 .endGameContainer__title {
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: var(--green);
     text-transform: uppercase;
     font-weight: 700;
@@ -20,6 +27,83 @@
     text-align: center;
 }
 
+/* EMOJI */
+
+.endGameContainer__emoji {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.endGameContainer__img {
+    width: 20%;
+    min-width: 200px;
+}
+
+/* SCORE */
+
 .endGameContainer__score {
     display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.endGameContainer__player {
+    display: flex;
+}
+
+.endGameContainer__pc {
+    display: flex;
+}
+
+.endGameContainer__text {
+    border-radius: 60px;
+    padding: 0.5rem;
+    background-color: var(--dark-blue);
+    color: var(--yellow);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.endGameContainer__playerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.endGameContainer__pcText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PLAY AGAIN */
+
+.endGameContainer__playAgain {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+.playAgain__button {
+    display: block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1.5rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: white;
+    transition: 700ms;
+    font-weight: 700;
+}
+
+.playAgain__button:hover {
+    background-color: white;
+    color: var(--dark-blue);
+    transform: scale(1.05);
+    font-weight: 700;
 }

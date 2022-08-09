@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./styles/container2/container2.css" />
     <link rel="stylesheet" href="./styles/container2/choice.css" />
     <link rel="stylesheet" href="./styles/reset-button.css" />
+    <link rel="stylesheet" href="./styles/endgamecontainer.css" />
 </head>
 <body>
     <main class="main">
@@ -62,7 +63,22 @@
             <div class="container2__choice container2__choice--paper" id="paper-container"><img class="choice__img choice__img--paper" alt="Paper" src="./images/paper.png" id="paper" /></div>
             <div class="container2__choice container2__choice--scissors" id="scissors-container"><img class="choice__img choice__img--scissors" alt="Scissors" src="./images/scissors.png" id="scissors" /></div>
         </div>
-        
+        <div class="endGameContainer">
+            <p class="endGameContainer__title"><span class="endGameContainer__winner">???</span> Won!</p>
+
+            <div class="endGameContainer__score">
+                <div class="endGameContainer__player">
+                    <p class="endGameContainer__playerText">Player:<span class="endGameContainer__playerPoints">0</span></p>
+                </div>
+                <div class="endGameContainer__pc">
+                    <p class="endGameContainer__pcText">PC:<span class="endGameContainer__pcPoints">0</span></p>
+                </div>
+            </div>
+
+            <div class="endGameContainer__playAgain">
+                <a href="/" class="playAgain__button">Play Again</a>
+            </div>
+        </div>
     </main>
     <div class="Reset">
         <button type="button" class="Reset__button">Reset</button>

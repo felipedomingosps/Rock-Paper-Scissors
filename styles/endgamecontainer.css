@@ -1,0 +1,25 @@
+.endGameContainer {
+    background-color: var(--dark-blue);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.endGameContainer__title {
+    font-size: 2rem;
+    color: var(--green);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.endGameContainer__score {
+    display: flex;
+}

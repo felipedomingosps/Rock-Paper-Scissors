@@ -9,7 +9,7 @@
 }
 
 .pcColumn__pcBox {
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 25px;
     background-color: var(--dark-blue);
 }
@@ -21,7 +21,7 @@
 }
 
 .pcColumn__pointsBox {
-    border-radius: 60px;
+    border-radius: 25px;
     padding: 0.5rem;
     background-color: var(--dark-blue);
     color: var(--yellow);
@@ -36,3 +36,14 @@
     justify-content: center;
 }
 
+@media screen and (max-width: 425px) {
+    .pcColumn__pointsBox {
+        font-size: 1rem;
+    }
+    .pcBox__name {
+        font-size: 1.5rem;
+    }
+    .display__pcColumn {
+        padding: 3px;
+    }
+}

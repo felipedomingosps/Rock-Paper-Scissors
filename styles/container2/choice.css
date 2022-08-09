@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    max-width: 20%;
+    max-width: 200px;
+    min-width: 150px;
     border-radius: 50%;
     transition: 700ms;
     cursor: pointer;
@@ -15,4 +16,10 @@
 .choice__img {
     width: 100%;
     transform: scaleX(-1);
+}
+
+@media screen and (max-width: 425px) {
+    .container2__choice {
+        min-width: 50%;
+    }
 }

@@ -11,3 +11,13 @@
     font-weight: 700;
     color: var(--yellow);
 }
+
+@media screen and (max-width: 425px) {
+    .versus__content {
+        font-size: 3rem;
+    }
+    .display__versus {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+}

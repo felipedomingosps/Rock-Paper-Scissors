@@ -1,11 +1,19 @@
 .hand__img {
     width: 70%;
+    max-width: 300px;
+    min-width: 200px;
 }
 
 .playerBox__hand {
     transform: scaleX(-1);
 }
 
+@media screen and (max-width: 425px) {
+    .hand__img {
+        min-width: 100px;
+        max-width: 100px;
+    }
+}
 
 /* Animations */
 

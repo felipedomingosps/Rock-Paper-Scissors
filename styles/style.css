@@ -6,10 +6,9 @@
 }
 
 html {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
-    
+    margin: 0 auto;
 }
 
 * {
@@ -21,4 +20,14 @@ body {
     flex-grow: 1;
     background: #2F4858;
 
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        height: 100vh;
+    }
+
+    body {
+        height: 100vh;
+    }
 }

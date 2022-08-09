@@ -117,3 +117,17 @@
     transform: scale(1.05);
     font-weight: 700;
 }
+
+@media screen and (max-width: 425px) {
+    .endGameContainer__score {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .endGameContainer {
+        margin: 0px;
+        padding: 0;
+        width: 100vw;
+        align-self: center;
+        border-radius: 0;
+    }
+}
